@@ -1,0 +1,214 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Contenedores */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+/* Etiquetas y títulos */
+.label {
+  display: inline-block;
+  background-color: #0077cc;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h1, h2, h3, h4 {
+  color: #f4c430;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #555;
+}
+
+/* Botones */
+.btn {
+  padding: 12px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.btn.primary {
+  background-color: #f4c430;
+  color: #111;
+}
+
+.btn.primary:hover {
+  background-color: #e0b800;
+}
+
+.btn.outline {
+  border: 2px solid #f4c430;
+  color: #f4c430;
+  background-color: transparent;
+}
+
+.btn.outline:hover {
+  background-color: #f4c430;
+  color: #111;
+}
+
+.btn.accent {
+  background-color: #0077cc;
+  color: #fff;
+}
+
+.btn.accent:hover {
+  background-color: #005fa3;
+}
+
+/* Pestañas */
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #eee;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background-color: #f4c430;
+  color: #111;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Tarjetas */
+.card-grid,
+.services-grid,
+.procedure-grid,
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card,
+.service-card,
+.procedure-card,
+.news-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover,
+.service-card:hover,
+.procedure-card:hover,
+.news-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 60px 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-title {
+  color: #f4c430;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.footer-list,
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.footer-list li,
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-list a,
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-list a:hover,
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-separator {
+  border: none;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 40px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

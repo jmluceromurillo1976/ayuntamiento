@@ -1,0 +1,89 @@
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
+
+interface Props {
+  onTransparencyClick: () => void;
+}
+
+export function Footer({ onTransparencyClick }: Props) {
+  return (
+    <footer className="bg-institucional-oscuro px-6 py-12 text-white">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Enlaces rápidos */}
+        <div>
+          <h4 className="text-institucional-dorado mb-4 font-semibold">Enlaces rápidos</h4>
+          <ul className="space-y-2">
+            <li>
+              <button
+                onClick={onTransparencyClick}
+                className="text-sm text-institucional-fondo hover:text-white transition-colors text-left"
+                aria-label="Ir al portal de transparencia"
+              >
+                Portal de transparencia
+              </button>
+            </li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Sede electrónica</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Perfil del contratante</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Tablón de anuncios</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Ofertas de empleo</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Normativa municipal</a></li>
+          </ul>
+        </div>
+
+        {/* Servicios destacados */}
+        <div>
+          <h4 className="text-institucional-dorado mb-4 font-semibold">Servicios destacados</h4>
+          <ul className="space-y-2">
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Cita previa</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Registro electrónico</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Pago de tributos</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Consulta de expedientes</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Incidencias y sugerencias</a></li>
+            <li><a href="#" className="text-sm text-institucional-fondo hover:text-white transition-colors">Calendario fiscal</a></li>
+          </ul>
+        </div>
+
+        {/* Contacto */}
+        <div>
+          <h4 className="text-institucional-dorado mb-4 font-semibold">Contacto</h4>
+          <ul className="space-y-4 text-institucional-fondo">
+            <li className="flex gap-3">
+              <MapPin className="h-5 w-5 text-institucional-dorado flex-shrink-0 mt-0.5" aria-label="Dirección" />
+              <span className="text-sm">
+                Plaza del Ayuntamiento, 1<br />
+                28001 Ciudad Moderna
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Phone className="h-5 w-5 text-institucional-dorado flex-shrink-0" aria-label="Teléfono" />
+              <span className="text-sm">+34 900 123 456</span>
+            </li>
+            <li className="flex gap-3">
+              <Mail className="h-5 w-5 text-institucional-dorado flex-shrink-0" aria-label="Correo electrónico" />
+              <span className="text-sm">info@ayuntamiento.es</span>
+            </li>
+            <li className="flex gap-3">
+              <Clock className="h-5 w-5 text-institucional-dorado flex-shrink-0" aria-label="Horario" />
+              <div className="text-sm">
+                Lunes a Viernes<br />
+                8:30 - 14:30
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <Separator className="my-8 bg-institucional-fondo/30" />
+
+      <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-institucional-fondo">
+        <p>© 2025 Ayuntamiento de Ciudad Moderna. Todos los derechos reservados.</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-white transition-colors">Aviso legal</a>
+          <a href="#" className="hover:text-white transition-colors">Política de privacidad</a>
+          <a href="#" className="hover:text-white transition-colors">Accesibilidad</a>
+          <a href="#" className="hover:text-white transition-colors">Cookies</a>
+        </div>
+      </div>
+    </footer>
+  );
+}
